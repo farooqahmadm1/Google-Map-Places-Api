@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/search_background"
+        android:layout_margin="10dp"
+        android:elevation="10dp"
+        android:id="@+id/search_bar">
+        <ImageView
+            android:id="@+id/image_search"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_magnify" />
+        <AutoCompleteTextView
+            android:id="@+id/search_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:layout_marginLeft="35dp"
+            android:hint="Enter Address, City or Zip Code"
+            android:imeOptions="actionSearch"/>
+
+    </RelativeLayout>
+    <ImageButton
+        android:id="@+id/gps_current"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:clickable="true"
+        style="@style/DefaultButton"
+        android:background="@drawable/my_location"
+        android:layout_below="@id/search_bar"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_gps"/>
+    <ImageButton
+        android:id="@+id/info"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:padding="8dp"
+        android:clickable="true"
+        style="@style/DefaultButton"
+        android:layout_below="@id/place_picker"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_info"/>
+    <ImageButton
+        android:id="@+id/place_picker"
+        android:layout_width="46dp"
+        android:layout_height="45dp"
+        android:padding="5dp"
+        android:clickable="true"
+        style="@style/DefaultButton"
+        android:layout_below="@id/search_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ic_"/>
+</RelativeLayout>
